@@ -1,0 +1,9 @@
+# Ignore the test files
+public/
+
+# Ignore the build files
+build/
+
+# Ignore metadata
+.cx_metadata.json
+.DS_Store
