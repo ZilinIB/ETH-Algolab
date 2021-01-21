@@ -11,8 +11,8 @@ void testcase() {
     int a; cin >> a;
     m.push_back(a);
   }
-  vector<vector<int>> p(n, vector<int>());
-  vector<pair<int, int>> pos;
+  vector<vector<int> > p(n, vector<int>());
+  vector<pair<int, int> > pos;
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < m[i]; j++) {
       int a; cin >> a;
@@ -27,7 +27,7 @@ void testcase() {
   // sort(pos.begin(), pos.end());
   
   // sort 2
-  vector<pair<int, int>> heap;
+  vector<pair<int, int> > heap;
   for (int i = 0; i < n; i++) {
     heap.push_back(make_pair(p[i].back(), i));
     // p[i].pop_back();

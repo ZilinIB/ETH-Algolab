@@ -13,11 +13,11 @@ Solutions and explanations for problems in the Algorithm Lab at ETH (2020)
 | W2.3  | [Beach Bars](./week2/beach%20bars/beach_bars.pdf) | DP, sliding window | [code](./week2/beach%20bars/src/main.cpp) | [idea](./week2/beach%20bars/idea.md) |
 | W2.4  | [Search Snippets](./week2/search%20snippets/search_snippets.pdf) | DP, sliding window | [code](./week2/search%20snippets/src/main.cpp) | [idea](./week2/search%20snippets/idea.md) |
 | W2.PoTW  | [Deck of Cards](./week2/deck%20of%20cards%20(PoTW)/deck_of_cards.pdf) | DP, sliding window | [code](./week2/deck%20of%20cards%20(PoTW)/src/main.cpp) | [idea](./week2/deck%20of%20cards%20(PoTW)/idea.md) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
+| W3.1  | [Hit](./week3/hit/hit.pdf) | trivial | [code](./week3/hit/src/main.cpp) | [idea](./week3/hit/idea.md) |
+| W3.2  | [First Hit](./week3/first%20hit/firsthit.pdf) | trivial | [code](./week3/first%20hit/src/main.cpp) | [idea](./week3/first%20hit/idea.md) |
+| W3.3  | [Antenna](./week3/antenna/antenna.pdf) | trivial | [code](./week3/antenna/src/main.cpp) | [idea](./week3/antenna/idea.md) |
+| W3.4  | [Hiking map](./week3/hiking%20maps/hiking-maps.pdf) | sliding window | [code](./week3/hiking%20maps/src/main.cpp) | [idea](./week3/hiking%20maps/idea.md) |
+| W3.PoTW | [From Russia with Love](./week3/from%20russia%20with%20love%20(PoTW)/russia.pdf) | DP | [code](./week3/from%20russia%20with%20love%20(PoTW)/src/main.cpp) | [idea](./week3/from%20russia%20with%20love%20(PoTW)/idea.md) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
