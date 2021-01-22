@@ -16,13 +16,13 @@ Solutions and explanations for problems in the Algorithm Lab at ETH (2020)
 | W3.1  | [Hit](./week3/hit/hit.pdf) | trivial | [code](./week3/hit/src/main.cpp) | [idea](./week3/hit/idea.md) |
 | W3.2  | [First Hit](./week3/first%20hit/firsthit.pdf) | trivial | [code](./week3/first%20hit/src/main.cpp) | [idea](./week3/first%20hit/idea.md) |
 | W3.3  | [Antenna](./week3/antenna/antenna.pdf) | trivial | [code](./week3/antenna/src/main.cpp) | [idea](./week3/antenna/idea.md) |
-| W3.4  | [Hiking map](./week3/hiking%20maps/hiking-maps.pdf) | sliding window | [code](./week3/hiking%20maps/src/main.cpp) | [idea](./week3/hiking%20maps/idea.md) |
+| W3.4  | [Hiking Map](./week3/hiking%20maps/hiking-maps.pdf) | sliding window | [code](./week3/hiking%20maps/src/main.cpp) | [idea](./week3/hiking%20maps/idea.md) |
 | W3.PoTW | [From Russia with Love](./week3/from%20russia%20with%20love%20(PoTW)/russia.pdf) | DP | [code](./week3/from%20russia%20with%20love%20(PoTW)/src/main.cpp) | [idea](./week3/from%20russia%20with%20love%20(PoTW)/idea.md) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
+| W4.1  | [First Steps with BGL](./week4/first%20steps%20with%20bgl/first_steps.pdf) | trivial | [code](./week4/first%20steps%20with%20bgl/src/main.cpp) | [idea](./week4/first%20steps%20with%20bgl/idea.md) |
+| W4.2  | [Ant Challenge](./week4/ant%20challenge/ant_challenge.pdf) | shortest path | [code](./week4/ant%20challenge/src/main.cpp) | [idea](./week4/ant%20challenge/idea.md) |
+| W4.3  | [Buddy Selection](./week4/buddy%20selection/buddies.pdf) | max matching | [code](./week4/buddy%20selection/src/main.cpp) | [idea](./week4/buddy%20selection/idea.md) |
+| W4.4  | [Important Bridges](./week4/important%20bridges/importantbridges.pdf) | bridge | [code](./week4/important%20bridges/src/main.cpp) | [idea](./week4/important%20bridges/idea.md) |
+| W4.PoTW  | [Defensive Line](./week4/defensive%20line%20(PoTW)/defensive%20line.pdf) | DP | [code](./week4/defensive%20line%20(PoTW)/src/main.cpp) | [idea](./week4/defensive%20line%20(PoTW)/idea.md) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |

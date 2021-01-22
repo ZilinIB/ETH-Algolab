@@ -41,7 +41,6 @@ void testcase() {
     add_edge(source(e, G), target(e, G), mst_graph);
   }
   
-  
   vertex_desc s = *(vertices(G).first);
   vector<int> dist_map(n);
   dijkstra_shortest_paths(G, s, 
