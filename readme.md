@@ -38,12 +38,12 @@ Solutions and explanations for problems in the Algorithm Lab at ETH (2020)
 | W7.3  | [Inball](./week7/inball/inball.pdf) | LP | [code](./week7/inball/src/main.cpp) | [idea](./week7/inball/idea.md) |
 | W7.4  | [Radiation](./week7/radiation/radiation.pdf) | exponential search, LP | [code](./week7/radiation/src/main.cpp) | [idea](./week7/radiation/idea.md) |
 | W7.PoTW  | [Octopussy](./week7/octopussy%20(PoTW)/octopussy.pdf) | greedy | [code](./week7/octopussy%20(PoTW)/src/main.cpp) | [idea](./week7/octopussy%20(PoTW)/idea.md) |
-| W8.1  | [Bistro](./week8/Bistro/bistro.pdf) | | [code](./week8/Bistro/src/main.cpp) | [idea](./week8/Bistro/idea.md) |
-| W8.2  | [Germs](./week8/Germs/germs.pdf) | | [code](./week8/Germs/src/main.cpp) | [idea](./week8/Germs/idea.md) |
-| W8.3  | [H1N1](./week8/H1N1/h1n1.pdf) | | [code](./week8/H1N1/src/main.cpp) | [idea](./week8/H1N1/idea.md) |
-| W8.4  | [Clues](./week8/Clues/clues.pdf) | | [code](./week8/Clues/src/main.cpp) | [idea](./week8/Clues/idea.md) |
-| W8.PoTW  | [Surveillance Photographs](./week8/surveillance%20photographs%20(PoTW)/surveillance.pdf) | | [code](./week8/surveillance%20photographs%20(PoTW)/src/main.cpp) | [idea](./week8/surveillance%20photographs%20(PoTW)/idea.md) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
+| W8.1  | [Bistro](./week8/Bistro/bistro.pdf) | D-Trig| [code](./week8/Bistro/src/main.cpp) | [idea](./week8/Bistro/idea.md) |
+| W8.2  | [Germs](./week8/Germs/germs.pdf) | D-Trig | [code](./week8/Germs/src/main.cpp) | [idea](./week8/Germs/idea.md) |
+| W8.3  | [H1N1](./week8/H1N1/h1n1.pdf) | D-Trig | [code](./week8/H1N1/src/main.cpp) | [idea](./week8/H1N1/idea.md) |
+| W8.4  | [Clues](./week8/Clues/clues.pdf) | D-Trig | [code](./week8/Clues/src/main.cpp) | [idea](./week8/Clues/idea.md) |
+| W8.PoTW  | [Surveillance Photographs](./week8/surveillance%20photographs%20(PoTW)/surveillance.pdf) | max flow | [code](./week8/surveillance%20photographs%20(PoTW)/src/main.cpp) | [idea](./week8/surveillance%20photographs%20(PoTW)/idea.md) |
+| W9.1  | [Real Estate Market](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
