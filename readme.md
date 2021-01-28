@@ -37,17 +37,17 @@ Solutions and explanations for problems in the Algorithm Lab at ETH (2020)
 | W7.2  | [Diet](./week7/diet/diet.pdf) | LP | [code](./week7/diet/src/main.cpp) | [idea](./week7/diet/idea.md) |
 | W7.3  | [Inball](./week7/inball/inball.pdf) | LP | [code](./week7/inball/src/main.cpp) | [idea](./week7/inball/idea.md) |
 | W7.4  | [Radiation](./week7/radiation/radiation.pdf) | exponential search, LP | [code](./week7/radiation/src/main.cpp) | [idea](./week7/radiation/idea.md) |
-| W7.PoTW  | [Octopussy](./week7/octopussy%20(PoTW)/octopussy.pdf) | greedy | [code](./week7/octopussy%20(PoTW)/src/main.cpp) | [idea](./week7/octopussy%20(PoTW)/idea.md) |
+| W7.PoTW  | [Octopussy](./week7/octopussy%20(PoTW)/octopussy.pdf) | greedy, memory | [code](./week7/octopussy%20(PoTW)/src/main.cpp) | [idea](./week7/octopussy%20(PoTW)/idea.md) |
 | W8.1  | [Bistro](./week8/Bistro/bistro.pdf) | D-Trig| [code](./week8/Bistro/src/main.cpp) | [idea](./week8/Bistro/idea.md) |
-| W8.2  | [Germs](./week8/Germs/germs.pdf) | D-Trig | [code](./week8/Germs/src/main.cpp) | [idea](./week8/Germs/idea.md) |
-| W8.3  | [H1N1](./week8/H1N1/h1n1.pdf) | D-Trig | [code](./week8/H1N1/src/main.cpp) | [idea](./week8/H1N1/idea.md) |
-| W8.4  | [Clues](./week8/Clues/clues.pdf) | D-Trig | [code](./week8/Clues/src/main.cpp) | [idea](./week8/Clues/idea.md) |
+| W8.2  | [Germs](./week8/Germs/germs.pdf) | D-Trig, sorting | [code](./week8/Germs/src/main.cpp) | [idea](./week8/Germs/idea.md) |
+| W8.3  | [H1N1](./week8/H1N1/h1n1.pdf) | D-Trig, MST, widest(or most narrow) path | [code](./week8/H1N1/src/main.cpp) | [idea](./week8/H1N1/idea.md) |
+| W8.4  | [Clues](./week8/Clues/clues.pdf) | D-Trig, CC, 2-coloring | [code](./week8/Clues/src/main.cpp) | [idea](./week8/Clues/idea.md) |
 | W8.PoTW  | [Surveillance Photographs](./week8/surveillance%20photographs%20(PoTW)/surveillance.pdf) | max flow | [code](./week8/surveillance%20photographs%20(PoTW)/src/main.cpp) | [idea](./week8/surveillance%20photographs%20(PoTW)/idea.md) |
-| W9.1  | [Real Estate Market](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
+| W9.1  | [Real Estate Market](./week9/real%20estate%20market/real_estate.pdf) | min cost max flow | [code](./week9/real%20estate%20market/src/main.cpp) | [idea](./week9/real%20estate%20market/idea.md) |
+| W9.2  | [Placing Knights](./week9/placing%20knights/knights.pdf) | max independent set| [code](./week9/placing%20knights/src/main.cpp) | [idea](./week9/placing%20knights/idea.md) |
+| W9.3  | [Algocoon Group](./week9/algocoon/Algocoon.pdf) | min cut | [code](./week9/algocoon/src/main.cpp) | [idea](./week9/algocoon/idea.md) |
+| W9.4  | [Casino Royale](./week9/casino%20royale/casino.pdf) | min cost max flow | [code](./week9/casino%20royale/src/main.cpp) | [idea](./week9/casino%20royale/idea.md) |
+| W9.PoTW  | [Astérix and the Roman Legions](./week9/asterix%20and%20the%20roman%20legions%20(PoTW)/legions.pdf) | LP | [code](./week9/asterix%20and%20the%20roman%20legions%20(PoTW)/src/main.cpp) | [idea](./week9/asterix%20and%20the%20roman%20legions%20(PoTW)/idea.md) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |

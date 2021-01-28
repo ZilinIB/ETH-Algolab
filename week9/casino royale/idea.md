@@ -1,0 +1,3 @@
+# Idea
+
+Very interesting setting where min cost max flow can be applied. Imagining having an edge from station i to station i + 1 with capacity l and cost BASE_COST. Every task from i to j is an edge from i to j with capacity 1 and cost BASE_COST-priority. Then we compute the min cost max flow from 0 to n - 1. The flow is constant, n. The cost minimization is equivalent to total priority maximazation.
