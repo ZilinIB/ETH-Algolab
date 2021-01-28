@@ -28,11 +28,11 @@ Solutions and explanations for problems in the Algorithm Lab at ETH (2020)
 | W5.3  | [San Francisco](./week5/san%20francisco/San%20Francisco.pdf) | DP | [code](./week5/san%20francisco/src/main.cpp) | [idea](./week5/san%20francisco/idea.md) |
 | W5.4  | [Asterix the Gaul](./week5/asterix%20the%20gaul/asterix_the_gaul.pdf) | binary search, split| [code](./week5/asterix%20the%20gaul/src/main.cpp) | [idea](./week5/asterix%20the%20gaul/idea.md) |
 | W5.PoTW  | [Motorcycles](./week5/motorcycles%20(PoTW)/motorcycles.pdf) | DP | [code](./week5/motorcycles%20(PoTW)/src/main.cpp) | [idea](./week5/motorcycles%20(PoTW)/idea.md) |
-| W6.1  | [Shopping](./week6/shopping/shopping.pdf) | | [code](./week6/shopping/src/main.cpp) | [idea](./week6/shopping/idea.md) |
-| W6.2  | [Knights](./week6/knights/knights.pdf) | | [code](./week6/knights/src/main.cpp) | [idea](./week6/knights/idea.md) |
-| W6.3  | [Tiles](./week6/tiles/tiles.pdf) | | [code](./week6/tiles/src/main_max_flow.cpp) | [idea](./week6/tiles/idea.md) |
-| W6.4  | [Kingdom Defense](./week6/kingdom%20defense/kingdom%20defense.pdf) | | [code](./week6/kingdom%20defense/src/main.cpp) | [idea](./week6/kingdom%20defense/idea.md) |
-| W6.PoTW  | [Tracking](./week6/tracking%20(PoTW)/ttracking.pdf) | | [code](./week6/tracking%20(PoTW)/src/main.cpp) | [idea](./week6/tracking%20(PoTW)/idea.md) |
+| W6.1  | [Shopping](./week6/shopping/shopping.pdf) | max flow | [code](./week6/shopping/src/main.cpp) | [idea](./week6/shopping/idea.md) |
+| W6.2  | [Knights](./week6/knights/knights.pdf) | max flow | [code](./week6/knights/src/main.cpp) | [idea](./week6/knights/idea.md) |
+| W6.3  | [Tiles](./week6/tiles/tiles.pdf) | max flow, max matching | [code](./week6/tiles/src/main_max_flow.cpp) | [idea](./week6/tiles/idea.md) |
+| W6.4  | [Kingdom Defense](./week6/kingdom%20defense/kingdom%20defense.pdf) | max flow | [code](./week6/kingdom%20defense/src/main.cpp) | [idea](./week6/kingdom%20defense/idea.md) |
+| W6.PoTW  | [Tracking](./week6/tracking%20(PoTW)/ttracking.pdf) | shortest path | [code](./week6/tracking%20(PoTW)/src/main.cpp) | [idea](./week6/tracking%20(PoTW)/idea.md) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |

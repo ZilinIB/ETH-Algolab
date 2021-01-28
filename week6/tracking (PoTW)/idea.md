@@ -1,0 +1,3 @@
+# Idea
+
+It is a shortest path problem with some constraints that a type of paths have to be traversed for a certain times (C). It can be achieved by modifying the graph. We first duplicate the graph C times, if an edge (u, v) is of that certain type in the original graph, we then connect (u_i, v_i+1) and (u_i+1, v_i) in the new graph. Calculate the shortest path from source_0 to target_C-1, we then get the result
