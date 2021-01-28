@@ -33,16 +33,16 @@ Solutions and explanations for problems in the Algorithm Lab at ETH (2020)
 | W6.3  | [Tiles](./week6/tiles/tiles.pdf) | max flow, max matching | [code](./week6/tiles/src/main_max_flow.cpp) | [idea](./week6/tiles/idea.md) |
 | W6.4  | [Kingdom Defense](./week6/kingdom%20defense/kingdom%20defense.pdf) | max flow | [code](./week6/kingdom%20defense/src/main.cpp) | [idea](./week6/kingdom%20defense/idea.md) |
 | W6.PoTW  | [Tracking](./week6/tracking%20(PoTW)/ttracking.pdf) | shortest path | [code](./week6/tracking%20(PoTW)/src/main.cpp) | [idea](./week6/tracking%20(PoTW)/idea.md) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
+| W7.1  | [What is the maximum](./week7/maximum/maximizeit.pdf) | LP | [code](./week7/maximum/src/main.cpp) | [idea](./week7/maximum/idea.md) |
+| W7.2  | [Diet](./week7/diet/diet.pdf) | LP | [code](./week7/diet/src/main.cpp) | [idea](./week7/diet/idea.md) |
+| W7.3  | [Inball](./week7/inball/inball.pdf) | LP | [code](./week7/inball/src/main.cpp) | [idea](./week7/inball/idea.md) |
+| W7.4  | [Radiation](./week7/radiation/radiation.pdf) | exponential search, LP | [code](./week7/radiation/src/main.cpp) | [idea](./week7/radiation/idea.md) |
+| W7.PoTW  | [Octopussy](./week7/octopussy%20(PoTW)/octopussy.pdf) | greedy | [code](./week7/octopussy%20(PoTW)/src/main.cpp) | [idea](./week7/octopussy%20(PoTW)/idea.md) |
+| W8.1  | [Bistro](./week8/Bistro/bistro.pdf) | | [code](./week8/Bistro/src/main.cpp) | [idea](./week8/Bistro/idea.md) |
+| W8.2  | [Germs](./week8/Germs/germs.pdf) | | [code](./week8/Germs/src/main.cpp) | [idea](./week8/Germs/idea.md) |
+| W8.3  | [H1N1](./week8/H1N1/h1n1.pdf) | | [code](./week8/H1N1/src/main.cpp) | [idea](./week8/H1N1/idea.md) |
+| W8.4  | [Clues](./week8/Clues/clues.pdf) | | [code](./week8/Clues/src/main.cpp) | [idea](./week8/Clues/idea.md) |
+| W8.PoTW  | [Surveillance Photographs](./week8/surveillance%20photographs%20(PoTW)/surveillance.pdf) | | [code](./week8/surveillance%20photographs%20(PoTW)/src/main.cpp) | [idea](./week8/surveillance%20photographs%20(PoTW)/idea.md) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
