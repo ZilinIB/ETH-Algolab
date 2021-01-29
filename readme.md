@@ -26,7 +26,7 @@ Solutions and explanations for problems in the Algorithm Lab at ETH (2020)
 | W5.1  | [Boats](./week5/boats/boats.pdf) | greedy | [code](./week5/boats/src/main.cpp) | [idea](./week5/boats/idea.md) |
 | W5.2  | [Attack of the Clones](./week5/attack%20of%20the%20clones/attack_of_the_clones.pdf) | greedy | [code](./week5/attack%20of%20the%20clones/src/main.cpp) | [idea](./week5/attack%20of%20the%20clones/idea.md) |
 | W5.3  | [San Francisco](./week5/san%20francisco/San%20Francisco.pdf) | DP | [code](./week5/san%20francisco/src/main.cpp) | [idea](./week5/san%20francisco/idea.md) |
-| W5.4  | [Asterix the Gaul](./week5/asterix%20the%20gaul/asterix_the_gaul.pdf) | binary search, split| [code](./week5/asterix%20the%20gaul/src/main.cpp) | [idea](./week5/asterix%20the%20gaul/idea.md) |
+| W5.4  | [Asterix the Gaul](./week5/asterix%20the%20gaul/asterix_the_gaul.pdf) | binary search, split&list | [code](./week5/asterix%20the%20gaul/src/main.cpp) | [idea](./week5/asterix%20the%20gaul/idea.md) |
 | W5.PoTW  | [Motorcycles](./week5/motorcycles%20(PoTW)/motorcycles.pdf) | DP | [code](./week5/motorcycles%20(PoTW)/src/main.cpp) | [idea](./week5/motorcycles%20(PoTW)/idea.md) |
 | W6.1  | [Shopping](./week6/shopping/shopping.pdf) | max flow | [code](./week6/shopping/src/main.cpp) | [idea](./week6/shopping/idea.md) |
 | W6.2  | [Knights](./week6/knights/knights.pdf) | max flow | [code](./week6/knights/src/main.cpp) | [idea](./week6/knights/idea.md) |
@@ -48,11 +48,11 @@ Solutions and explanations for problems in the Algorithm Lab at ETH (2020)
 | W9.3  | [Algocoon Group](./week9/algocoon/Algocoon.pdf) | min cut | [code](./week9/algocoon/src/main.cpp) | [idea](./week9/algocoon/idea.md) |
 | W9.4  | [Casino Royale](./week9/casino%20royale/casino.pdf) | min cost max flow | [code](./week9/casino%20royale/src/main.cpp) | [idea](./week9/casino%20royale/idea.md) |
 | W9.PoTW  | [Astérix and the Roman Legions](./week9/asterix%20and%20the%20roman%20legions%20(PoTW)/legions.pdf) | LP | [code](./week9/asterix%20and%20the%20roman%20legions%20(PoTW)/src/main.cpp) | [idea](./week9/asterix%20and%20the%20roman%20legions%20(PoTW)/idea.md) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
+| W10.1  | [World Cup](./week10/worldcup/worldcup.pdf) | D-Trig, LP | [code](./week10/worldcup/src/main.cpp) | [idea](./week10/worldcup/idea.md) |
+| W10.2  | [Asterix in Switzerland](./week10/asterix%20in%20switzerland/switzerland.pdf) | min cut | [code](./week10/asterix%20in%20switzerland/src/main.cpp) | [idea](./week10/asterix%20in%20switzerland/idea.md) |
+| W10.3  | [Asterix and the Chariot Race](./week10/asterix%20and%20the%20chariot%20race/race.pdf) | DP | [code](./week10/asterix%20and%20the%20chariot%20race/src/main.cpp) | [idea](./week10/asterix%20and%20the%20chariot%20race/idea.md) |
+| W10.4  | [New York](./week10/new%20york/newyork.pdf) | DP, dfs | [code](./week10/new%20york/src/main.cpp) | [idea](./week10/new%20york/idea.md) |
+| W10.PoTW  | [Idefix](./week10/idefix%20(PoTW)/idefix.pdf) | binary search, D-Trig | [code](./week10/idefix%20(PoTW)/src/main.cpp) | [idea](./week10/idefix%20(PoTW)/idea.md) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |

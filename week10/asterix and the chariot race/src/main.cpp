@@ -28,15 +28,7 @@ VVI mem;
 int helper(int curr, int status) {
     if (mem[curr][status] == -1) {
         int tot_cost;
-        if (G[curr].size() == 0) {
-            if (status == 0) {
-                tot_cost = cost[curr];
-            } else if (status == 2) {
-                tot_cost = 0;
-            } else {
-                tot_cost = INT_MAX;
-            }
-        } else if (status == 0) {
+        if (status == 0) {
             tot_cost = cost[curr];
             for (int child : G[curr]) {
                 int c0 = helper(child, 0);
@@ -47,19 +39,34 @@ int helper(int curr, int status) {
             }
         } else if (status == 1) {
             tot_cost = INT_MAX;
-
-            for (int choice : G[curr]) {
-                int curr_cost = 0;
-                for (int child : G[curr]) {
-                    if (child == choice) {
-                        curr_cost += helper(child, 0);
-                    } else {
-                        curr_cost += min(helper(child, 0), helper(child, 1));
-                    }
+            int min_cost = 0;
+            bool all_children_1 = true;
+            for (int child : G[curr]) {
+                int inc;
+                if (helper(child, 0) < helper(child, 1)) {
+                    all_children_1 = false;
+                    inc = helper(child, 0);
+                } else {
+                    inc = helper(child, 1);
                 }
-                tot_cost = min(curr_cost, tot_cost);
+                min_cost += inc;
             }
- 
+            
+            if (!all_children_1) {
+                tot_cost = min_cost;
+            } else {
+                for (int choice : G[curr]) {
+                    int curr_cost = 0;
+                    for (int child : G[curr]) {
+                        if (child == choice) {
+                            curr_cost += helper(child, 0);
+                        } else {
+                            curr_cost += min(helper(child, 0), helper(child, 1));
+                        }
+                    }
+                    tot_cost = min(curr_cost, tot_cost);
+                }
+            }   
         } else {
             tot_cost = 0;
             for (int child : G[curr]) {
