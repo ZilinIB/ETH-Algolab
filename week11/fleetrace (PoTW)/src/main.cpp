@@ -52,15 +52,15 @@ void testcase() {
 
     vertex_desc v_source = boost::add_vertex(G);
     vertex_desc v_target = boost::add_vertex(G);
-    vertex_desc v_helper = boost::add_vertex(G);
+    // vertex_desc v_helper = boost::add_vertex(G);
 
     for (int i = 0; i < b; i++) {
         adder.add_edge(v_source, i, 1, 0);
-        adder.add_edge(i, v_helper, 1, MAX_COST / 2);
+        adder.add_edge(i, v_target, 1, MAX_COST);
     }
     for (int i = 0; i < s; i++) {
         int j = b + i;
-        adder.add_edge(v_helper, j, 1, MAX_COST / 2);
+        // adder.add_edge(v_helper, j, 1, MAX_COST / 2);
         adder.add_edge(j, v_target, 1, 0);
     }
 
@@ -74,7 +74,7 @@ void testcase() {
     
     boost::successive_shortest_path_nonnegative_weights(G, v_source, v_target);
     int cost = boost::find_flow_cost(G);
-    cout << min(b, s) * MAX_COST - cost << endl;
+    cout << b * MAX_COST - cost << endl;
 }
 
 int main() {

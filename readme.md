@@ -53,11 +53,11 @@ Solutions and explanations for problems in the Algorithm Lab at ETH (2020)
 | W10.3  | [Asterix and the Chariot Race](./week10/asterix%20and%20the%20chariot%20race/race.pdf) | DP | [code](./week10/asterix%20and%20the%20chariot%20race/src/main.cpp) | [idea](./week10/asterix%20and%20the%20chariot%20race/idea.md) |
 | W10.4  | [New York](./week10/new%20york/newyork.pdf) | DP, dfs | [code](./week10/new%20york/src/main.cpp) | [idea](./week10/new%20york/idea.md) |
 | W10.PoTW  | [Idefix](./week10/idefix%20(PoTW)/idefix.pdf) | binary search, D-Trig | [code](./week10/idefix%20(PoTW)/src/main.cpp) | [idea](./week10/idefix%20(PoTW)/idea.md) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
-| W  | [](./week) | | [code](./week) | [idea](./week) |
+| W11.1  | [Lestrade](./week11/lestrade/lestrade.pdf) | LP | [code](./week11/lestrade/src/main.cpp) | [idea](./week11/lestrade/idea.md) |
+| W11.2  | [Return of the Jedi](./week11/return%20of%20the%20jedi/return_of_the_jedi.pdf) | bfs, MST, widest(or most narrow) path | [code](./week11/return%20of%20the%20jedi/src/main.cpp) | [idea](./week11/return%20of%20the%20jedi/idea.md) |
+| W11.3  | [The Tourney of the Hand](./week11/hand/hand.pdf) | D-Trig | [code](./week11/hand/src/main.cpp) | [idea](./week11/hand/idea.md) |
+| W11.4  | [The Fighting Pits of Meereen](./week11/fighting%20pits%20of%20meereen/meereen.pdf) | DP | [code](./week11/fighting%20pits%20of%20meereen/src/main.cpp) | [idea](./week11/fighting%20pits%20of%20meereen/idea.md) |
+| W11.PoTW  | [Fleetrace](./week11/fleetrace%20(PoTW)/fleetrace.pdf) | min cost max flow | [code](./week11/fleetrace%20(PoTW)/src/main.cpp) | [idea](./week11/fleetrace%20(PoTW)/idea.md) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
 | W  | [](./week) | | [code](./week) | [idea](./week) |
