@@ -58,14 +58,14 @@ Solutions and explanations for problems in the Algorithm Lab at ETH (2020)
 | W11.3  | [The Tourney of the Hand](./week11/hand/hand.pdf) | D-Trig | [code](./week11/hand/src/main.cpp) | [idea](./week11/hand/idea.md) |
 | W11.4  | [The Fighting Pits of Meereen](./week11/fighting%20pits%20of%20meereen/meereen.pdf) | DP | [code](./week11/fighting%20pits%20of%20meereen/src/main.cpp) | [idea](./week11/fighting%20pits%20of%20meereen/idea.md) |
 | W11.PoTW  | [Fleetrace](./week11/fleetrace%20(PoTW)/fleetrace.pdf) | min cost max flow | [code](./week11/fleetrace%20(PoTW)/src/main.cpp) | [idea](./week11/fleetrace%20(PoTW)/idea.md) |
-| W12.1  | [India](./week12/india/india.pdf) | | [code](./week12/india/src/main.cpp) | [idea](./week12/india/idea.md) |
-| W12.2  | [Hong Kong](./week12/hong%20kong/hongkong.pdf) | | [code](./week12/hong%20kong/src/main.cpp) | [idea](./week12/hong%20kong/idea.md) |
-| W12.3  | [Car Sharing](./week12/car%20sharing/carsharing.pdf) | | [code](./week12/car%20sharing/src/main.cpp) | [idea](./week12/car%20sharing/idea.md) |
-| W12.4  | [Moving Books](./week12/moving%20books/moving_books.pdf) | | [code](./week12/moving%20books/src/main.cpp) | [idea](./week12/moving%20books/idea.md) |
-| W12.PoTW  | [The Iron Islands](./week12/the%20iron%20islands%20(PoTW)/iron_island.pdf) | | [code](./week12/the%20iron%20islands%20(PoTW)/src/main.cpp) | [idea](./week12/the%20iron%20islands%20(PoTW)/idea.md) |
-| W13.1  | [Punch](./week13/punch/punch.pdf) | | [code](./week13/punch/src/main.cpp) | [idea](./week13/punch/idea.md) |
-| W13.2  | [Evolution](./week13/evolution/evolution.pdf) | | [code](./week13/evolution/src/main.cpp) | [idea](./week13/evolution/idea.md) |
-| W13.3  | [Sith](./week13/sith/sith.pdf) | | [code](./week13/sith/src/main.cpp) | [idea](./week13/sith/idea.md) |
-| W13.4  | [Marathon](./week13/marathon/marathon.pdf) | | [code](./week13/marathon/src/main.cpp) | [idea](./week13/marathon/idea.md) |
-| W13.PoTW  | [Lannister](./week13/lannister%20(PoTW)/lannister.pdf) | | [code](./week13/lannister%20(PoTW)/src/main.cpp) | [idea](./week13/lannister%20(PoTW)/idea.md) |
-| W14.PoTW  | [On Her Majesty’s Secret Service](./week14/secret%20service%20(PoTW)/secret%20service.pdf) | | [code](./week14/secret%20service%20(PoTW)/src/main.cpp) | [idea](./week14/secret%20service%20(PoTW)/idea.md) |
+| W12.1  | [India](./week12/india/india.pdf) | min cost max flow | [code](./week12/india/src/main.cpp) | [idea](./week12/india/idea.md) |
+| W12.2  | [Hong Kong](./week12/hong%20kong/hongkong.pdf) | D-Trig, MST, widest(or most narrow) path | [code](./week12/hong%20kong/src/main.cpp) | [idea](./week12/hong%20kong/idea.md) |
+| W12.3  | [Car Sharing](./week12/car%20sharing/carsharing.pdf) | min cost max flow | [code](./week12/car%20sharing/src/main.cpp) | [idea](./week12/car%20sharing/idea.md) |
+| W12.4  | [Moving Books](./week12/moving%20books/moving_books.pdf) | DP, binary search | [code](./week12/moving%20books/src/main.cpp) | [idea](./week12/moving%20books/idea.md) |
+| W12.PoTW  | [The Iron Islands](./week12/the%20iron%20islands%20(PoTW)/iron_island.pdf) | DP, sliding window | [code](./week12/the%20iron%20islands%20(PoTW)/src/main.cpp) | [idea](./week12/the%20iron%20islands%20(PoTW)/idea.md) |
+| W13.1  | [Punch](./week13/punch/punch.pdf) | DP | [code](./week13/punch/src/main.cpp) | [idea](./week13/punch/idea.md) |
+| W13.2  | [Evolution](./week13/evolution/evolution.pdf) | DFS | [code](./week13/evolution/src/main.cpp) | [idea](./week13/evolution/idea.md) |
+| W13.3  | [Sith](./week13/sith/sith.pdf) | binary search, CC | [code](./week13/sith/src/main.cpp) | [idea](./week13/sith/idea.md) |
+| W13.4  | [Marathon](./week13/marathon/marathon.pdf) | max flow, shortest path | [code](./week13/marathon/src/main.cpp) | [idea](./week13/marathon/idea.md) |
+| W13.PoTW  | [Lannister](./week13/lannister%20(PoTW)/lannister.pdf) | LP | [code](./week13/lannister%20(PoTW)/src/main.cpp) | [idea](./week13/lannister%20(PoTW)/idea.md) |
+| W14.PoTW  | [On Her Majesty’s Secret Service](./week14/secret%20service%20(PoTW)/secret%20service.pdf) | binary search, max flow | [code](./week14/secret%20service%20(PoTW)/src/main.cpp) | [idea](./week14/secret%20service%20(PoTW)/idea.md) |

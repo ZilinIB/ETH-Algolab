@@ -30,9 +30,6 @@ void testcase() {
         int tmp; cin >> tmp;
         capacity.push_back(tmp);
     }
-
-    int ind = 1;
-
     int max_len = 0;
     vector<vector<subpath> > data(w);
     vector<subpath> all_data;
@@ -55,9 +52,6 @@ void testcase() {
             while(r < data[i].size()) {
                 int curr_demand = data[i][r].tot_demand - data[i][l].tot_demand;
                 if (curr_demand == k) {
-                    if (r - l > max_len) {
-                        ind = 1;
-                    }
                     max_len = max(max_len, r - l);
                     r++;
                 } else if (curr_demand < k) {
@@ -77,11 +71,6 @@ void testcase() {
         int curr_demand = all_data[l].tot_demand + all_data[r].tot_demand;
         if (curr_demand == goal) {
             if (all_data[l].path_ind != all_data[r].path_ind) {
-                if (all_data[l].pos + all_data[r].pos + 1 > max_len &&
-                    all_data[l].pos > 0 &&
-                    all_data[r].pos > 0) {
-                    ind = 2;
-                }
                 max_len = max(max_len, all_data[l].pos + all_data[r].pos + 1);
             }
             if (l + 1 < all_data.size() && all_data[l + 1].tot_demand == all_data[l].tot_demand) {

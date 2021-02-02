@@ -1,0 +1,5 @@
+# Idea
+
+This problem is very interesting. We model every (Location, Time) pair as a node. An edge exists between (loc, T<sub>loc, i</sub>) and (loc, T<sub>loc, i+1</sub>) where T<sub>loc, i</sub> and T<sub>loc, i+1</sub> are two neighboring time points that have appeared in at least one booking containing loc. The edge weight will be C * (T<sub>loc, i+1</sub> - T<sub>loc, i</sub>) where C is the unit base cost for parking the car for an hour. An edge exists between (loc<sub>a</sub>, T<sub>loc<sub>a</sub> , i</sub>) and (loc<sub>b</sub>, T<sub>loc<sub>b</sub> , j</sub>) for a != b if and only if there's a booking between them. The cost will then be (T<sub>loc<sub>b</sub> , j</sub> - T<sub>loc<sub>a</sub> , i</sub>) * C - booking profit.
+
+Then compute the min cost max flow. Base cost - min cost is the maximal profit.
