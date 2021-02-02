@@ -7,3 +7,8 @@ We treat the face of the original graph as a vertex in the new graph, two vertic
 Then the problem reduced to finding the widest path from every vertex to the vertex that represents the infinite face. 
 
 For that we can use MST with the edge weight being the inverse of the width (LONG_MAX - width). Since MST is used to finding the most narrow path(the bottleneck is then the minimal edge weight on the path in MST).
+
+# Remark
+EPICK uses double to compute the distance, therefore can be directly casted into long. However, more precise kernel can't.
+
+When iterating over all neighboring pairs of faces, we should iterate use the face iterator instead of the edge iterator. Using the edge iterator will generate some bugs for unknown reason. (A guess is that the f->neighbor operation is not allowed for infinite face);
