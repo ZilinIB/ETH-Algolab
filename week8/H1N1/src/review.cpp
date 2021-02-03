@@ -8,7 +8,7 @@
 #include <boost/graph/kruskal_min_spanning_tree.hpp>
 
 // CGAL includes
-#include <CGAL/Exact_predicates_exact_constructions_kernel.h>
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/Delaunay_triangulation_2.h>
 #include <CGAL/Triangulation_vertex_base_2.h>
 #include <CGAL/Triangulation_face_base_with_info_2.h>
@@ -20,7 +20,7 @@ typedef boost::graph_traits<weighted_graph>::edge_descriptor            edge_des
 typedef boost::graph_traits<weighted_graph>::vertex_descriptor          vertex_desc;
 typedef boost::graph_traits<weighted_graph>::out_edge_iterator              out_edge_it;
 
-typedef CGAL::Exact_predicates_exact_constructions_kernel K;
+typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 // we want to store an index with each vertex
 typedef std::size_t                                            Index;
 typedef CGAL::Triangulation_vertex_base_2<K>                   Vb;
@@ -31,8 +31,7 @@ typedef K::Point_2 Point;
 
 using namespace std;
 
-void testcase() {
-    int n; cin >> n;
+void testcase(int n) {
     vector<Point> pts;
     for (int i = 0; i < n; i++) {
         int x, y;
@@ -44,11 +43,6 @@ void testcase() {
     Delaunay t;
     t.insert(pts.begin(), pts.end());
 
-    auto f = t.incident_faces(t.infinite_vertex());
-    do {
-        f->info() = 0;
-    } while (++f != t.incident_faces(t.infinite_vertex()));
-
     int count = 1;
     for (auto face_it = t.finite_faces_begin(); face_it != t.finite_faces_end(); face_it++) {
         face_it->info() = count++;
@@ -56,27 +50,32 @@ void testcase() {
 
     weighted_graph G(count);
     weight_map weights = boost::get(boost::edge_weight, G);
-    for (auto edge_it = t.finite_edges_begin(); edge_it != t.finite_edges_end(); edge_it++) {
-        Point p1 = edge_it->first->vertex((edge_it->second+1)%3)->point();
-        Point p2 = edge_it->first->vertex((edge_it->second+2)%3)->point();
-        auto dist = CGAL::squared_distance(p1, p2);
-        long length = LONG_MAX - long(CGAL::to_double(CGAL::squared_distance(p1, p2)));
 
-        int source, target;
-        source = edge_it->first->info();
-        target = edge_it->first->neighbor(edge_it->second)->info();
-        boost::add_edge(source, target, length, G);
+    for (auto f = t.finite_faces_begin(); f != t.finite_faces_end(); f++) {
+        int curr_index = f->info();
+        for (int i = 0; i < 3; i++) {
+            auto neighbor = f->neighbor(i);
+            auto p1 = f->vertex((i + 1) % 3)->point();
+            auto p2 = f->vertex((i + 2) % 3)->point();
+            int neighbor_index = (t.is_infinite(neighbor)) ? 0 : neighbor->info();
+            // int neighbor_index = neighbor->info();
+            auto e = boost::edge(curr_index, neighbor_index, G);
+            if (!e.second) {
+                boost::add_edge(curr_index, neighbor_index, LONG_MAX - long(CGAL::squared_distance(p1, p2)), G);
+            }
+        }
     }
     vector<edge_desc> mst;    // vector to store MST edges (not a property map!)
     boost::kruskal_minimum_spanning_tree(G, std::back_inserter(mst));
 
     weighted_graph MST(count);
+    weight_map weights_mst = boost::get(boost::edge_weight, MST);
     for (edge_desc e : mst) {
         boost::add_edge(boost::source(e, G), boost::target(e, G), weights[e], MST);
     }
 
     // bfs to find the bottleneck
-    vector<long> bottleneck(count);
+    vector<long> bottleneck(count, 0);
     vector<bool> vis(count, false);
     queue<int> q;
     q.push(0);
@@ -93,7 +92,7 @@ void testcase() {
             }
             vis[target] = true;
             q.push(target);
-            bottleneck[target] = max(bottleneck[curr], weights[*ebeg]);
+            bottleneck[target] = max(bottleneck[curr], weights_mst[*ebeg]);
         }
     }
 
@@ -108,9 +107,15 @@ void testcase() {
         cin >> x >> y >> d;
         Point curr(x, y);
         Point nn = t.nearest_vertex(curr)->point();
-        int nn_ind = t.locate(curr)->info();
-        long dist = long(CGAL::to_double(CGAL::squared_distance(curr, nn)));
-        if (dist > bottleneck[nn_ind] || dist < d) {
+        auto curr_face = t.locate(curr);
+        int curr_ind;
+        if (t.is_infinite(curr_face)) {
+            curr_ind = 0;
+        } else {
+            curr_ind = t.locate(curr)->info();
+        }
+        long dist = long(CGAL::squared_distance(curr, nn));
+        if (4 * d > bottleneck[curr_ind] || dist < d) {
             cout << "n";
         } else {
             cout << "y";
@@ -121,8 +126,9 @@ void testcase() {
 
 int main() {
     ios_base::sync_with_stdio(false);
-    int t; cin >> t;
-    while (t--) {
-        testcase();
+    int n; cin >> n;
+    while(n) {
+        testcase(n);
+        cin >> n;
     }
 }

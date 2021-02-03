@@ -23,7 +23,6 @@ bool suffice_(const int d, const vector<Location>& tumor, const vector<Location>
         for (int b = 0; b <= d - a; b++) {
             for (int c = 0; c <= d - a - b; c++) {
                 
-
                 for (int i = 0; i < tissue.size(); i++) {
                     double coef = 1;
                     coef *= pow(get<0>(tissue[i]), a);
