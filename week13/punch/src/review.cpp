@@ -1,98 +1,77 @@
 #include <iostream>
 #include <vector>
 #include <utility>
-#include <climits>
 
 using namespace std;
+typedef vector<pair<int, int> > VP;
 
-typedef pair<int, int> Entry;
-
-Entry best_with_curr(int i, int j, vector<vector<Entry> >& DP, vector<vector<Entry> >& MEM, vector<Entry>& beverages) {
-    if (MEM[i][j].first < 0) {
-        int cost = beverages[i].first;
-        int vol = beverages[i].second;
-        int vol_remain = j - vol;
-        if (vol_remain < 0) {
-            vol_remain = 0;
-        }
-        int prev_cost = DP[i - 1][vol_remain].first;
-        int curr_min_cost;
-        if (prev_cost == INT_MAX) {
-            curr_min_cost = INT_MAX;
-        } else {
-            curr_min_cost = prev_cost + cost;
-        }
-        int curr_variety = DP[i - 1][vol_remain].second + 1;
-
-        if (vol_remain > 0) {
-            Entry result = best_with_curr(i, vol_remain, DP, MEM, beverages);
-            int prev_min_cost;
-            if (result.first == INT_MAX) {
-                prev_min_cost = INT_MAX;
-            } else {
-                prev_min_cost = result.first + cost;
-            } 
-            int prev_variety = result.second;
-
-            if (prev_min_cost < curr_min_cost) {
-                curr_min_cost = prev_min_cost;
-                curr_variety = prev_variety;
-            } else if (prev_min_cost == curr_min_cost) {
-                curr_variety = max(curr_variety, prev_variety);
-            }
-        }
-        
-        MEM[i][j] = Entry(curr_min_cost, curr_variety);
-    } 
-        
-    return MEM[i][j];
-}
+int MAX_COST = 100000000;
 
 void testcase() {
-    int n, k; cin >> n >> k;
-    vector<Entry> beverages;
-    beverages.push_back(make_pair(0, 0));
-    for (int i = 0; i < n; i++) {
+    int n, k; cin >> n >>k;
+
+    // DP[i][j] stores the min cost and corresponding variety
+    // MEM[i][j] stroes the min cost and corresponding variety that must have used beverage i
+    vector<VP> DP(n + 1, VP(k + 1, make_pair(MAX_COST, 0)));
+    vector<VP> MEM(n + 1, VP(k + 1, make_pair(MAX_COST, 0)));
+    VP beverages(n + 1, make_pair(0, 0));
+    for (int i = 1; i <= n; i++) {
         int c, v; cin >> c >> v;
-        beverages.push_back(make_pair(c, v));
+        beverages[i].first = c;
+        beverages[i].second = v;
     }
 
-    vector<vector<Entry> >DP(n + 1, vector<Entry>(k + 1));
-    vector<vector<Entry> >MEM(n + 1, vector<Entry>(k + 1, make_pair(-1, -1)));
-    for (int i = 1; i <= k; i++) {
-        DP[0][i] = make_pair(INT_MAX, 0);
-    }
     for (int i = 0; i <= n; i++) {
-        DP[i][0] = make_pair(0, 0);
+        DP[i][0].first = 0;
+        MEM[i][0].first = 0;
     }
 
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= k; j++) {
-            Entry with_curr = best_with_curr(i, j, DP, MEM, beverages);
-            int cost_with_curr = with_curr.first;
-            int var_with_curr = with_curr.second;
-
-            int cost_without_curr = DP[i - 1][j].first;
-            int var_without_curr = DP[i - 1][j].second;
-
-            if (cost_with_curr < cost_without_curr) {
-                DP[i][j].first = cost_with_curr;
-                DP[i][j].second = var_with_curr;
-            } else if (cost_with_curr > cost_without_curr) {
-                DP[i][j].first = cost_without_curr;
-                DP[i][j].second = var_without_curr;
-            } else if (cost_with_curr == INT_MAX) {
-                DP[i][j].first = INT_MAX;
-                DP[i][j].second = 0;
+            // 1. compute the min cost with current beverage
+            int c = beverages[i].first;
+            int v = beverages[i].second;
+            int vol_remain = max(0, j - v);
+            // 1.1 the cost and variety with only one portion of current beverage
+            int cost_with_one_curr = DP[i - 1][vol_remain].first + c;
+            int var_with_one_curr = DP[i - 1][vol_remain].second + 1;
+            // 1.2 the cost and variety with multiple current beverage
+            int cost_with_multi_curr = MEM[i][vol_remain].first + c;
+            int var_with_multi_curr = MEM[i][vol_remain].second;
+            int cost_with_curr, var_with_curr;
+            if (cost_with_one_curr > cost_with_multi_curr) {
+                cost_with_curr = cost_with_multi_curr;
+                var_with_curr = var_with_multi_curr;
+            } else if (cost_with_one_curr < cost_with_multi_curr) {
+                cost_with_curr = cost_with_one_curr;
+                var_with_curr = var_with_one_curr;
             } else {
-                DP[i][j].first = cost_with_curr;
-                DP[i][j].second = max(var_with_curr, var_without_curr);
+                cost_with_curr = cost_with_one_curr;
+                var_with_curr = max(var_with_one_curr, var_with_multi_curr);
             }
+            MEM[i][j] = make_pair(cost_with_curr, var_with_curr);
+
+            // 2. compute the min cost without current beverage
+            int cost_without_curr = DP[i - 1][j].first;
+            int var_without_curr = DP[i -1 ][j].second;
+
+            // 3. compute the global min cost
+            int min_cost, var;
+            if (cost_with_curr > cost_without_curr) {
+                min_cost = cost_without_curr;
+                var = var_without_curr;
+            } else if (cost_with_curr < cost_without_curr) {
+                min_cost = cost_with_curr;
+                var = var_with_curr;
+            } else {
+                min_cost = cost_with_curr;
+                var = max(var_with_curr, var_without_curr);
+            }
+            DP[i][j] = make_pair(min_cost, var);
+
         }
     }
-
     cout << DP[n][k].first << " " << DP[n][k].second << endl;
-
 }
 
 int main() {
