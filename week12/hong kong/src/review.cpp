@@ -62,9 +62,9 @@ void testcase() {
             } else {
                 neighbor_index = f_neighbor->info();
             }
-            // if (neighbor_index > curr_index) {
-            //     continue;
-            // }
+            if (neighbor_index > curr_index) {
+                continue;
+            }
             Point p1 = f->vertex((i+1)%3)->point();
             Point p2 = f->vertex((i+2)%3)->point();
             K::FT edge_len_sq = CGAL::squared_distance(p1, p2);                
