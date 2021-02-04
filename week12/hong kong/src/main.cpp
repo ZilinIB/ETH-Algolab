@@ -68,8 +68,6 @@ void testcase() {
     max_clearance.push_back(MAX_SQ_DIST);
     for (Face_iterator f = t.finite_faces_begin(); f != t.finite_faces_end(); ++f) {
         f->info() = ind++;
-        K::Point_2 p = t.dual(f);
-        max_clearance.push_back(CGAL::squared_distance(p, f->vertex(0)->point()));
     }
 
     EdgeV edges;
@@ -95,9 +93,18 @@ void testcase() {
             edges.emplace_back(curr, next, val);
         }
 
-        K::FT val2 = max_clearance[curr]; 
-        edges.emplace_back(curr, 0, val2);
+        K::Point_2 p1 = f->vertex(0)->point();
+        K::Point_2 p2 = f->vertex(1)->point();
+        K::Point_2 p3 = f->vertex(2)->point();
+
+        K::FT curr_clearance = CGAL::squared_radius(p1, p2, p3);
+        edges.emplace_back(curr, 0, curr_clearance);
     }
+
+    // cout << "edges: " << endl;
+    // for (auto e : edges) {
+    //     cout << "(" << get<0>(e) << ", " << get<1>(e) << "): " << get<2>(e) << endl;
+    // }
 
     std::sort(edges.begin(), edges.end(),
       [](const Edge& e1, const Edge& e2) -> bool {
@@ -108,20 +115,53 @@ void testcase() {
     Index n_components = ind;
     // ... and process edges in order of increasing length
     vector<EdgeV> mst(ind);
+
+    // vector<vector<int> > G(ind);
+    // map<pair<int, int>, K::FT> weights;
     for (EdgeV::const_iterator e = edges.begin(); e != edges.end(); ++e) {
         // determine components of endpoints
-        Index c1 = uf.find_set(std::get<0>(*e));
-        Index c2 = uf.find_set(std::get<1>(*e));
+        int u = std::get<0>(*e);
+        int v = std::get<1>(*e);
+        Index c1 = uf.find_set(u);
+        Index c2 = uf.find_set(v);
         if (c1 != c2) {
             // this edge connects two different components => part of the emst
             uf.link(c1, c2);
-            mst[std::get<0>(*e)].push_back(*e);
-            mst[std::get<1>(*e)].push_back(*e);
+            mst[u].push_back(*e);
+            mst[v].push_back(*e);
+
+            // G[u].push_back(v);
+            // G[v].push_back(u);
+            // weights[make_pair(u, v)] = get<2>(*e);
+            // weights[make_pair(v, u)] = get<2>(*e);
             if (--n_components == 1){
                 break;
             }
         }
     }
+    // cout << "mst" << endl;
+    // for (int i = 0; i < ind; i++) {
+    //     cout << i << " : ";
+    //     for (auto e : mst[i]) {
+    //         int u = get<0>(e);
+    //         int v = get<1>(e);
+    //         if (i == u) {
+    //             cout << v << " ";
+    //         } else {
+    //             cout << u << " ";
+    //         }
+    //     }
+    //     cout << endl;
+    // }
+
+    // cout << "mst" << endl;
+    // for (int i = 0; i < ind; i++) {
+    //     cout << i << " : ";
+    //     for (auto v : G[i]) {
+    //         cout << v << " ";
+    //     }
+    //     cout << endl;
+    // }
 
     vector<K::FT> bottle_neck(ind);
     vector<bool> vis(ind, false);
@@ -129,6 +169,11 @@ void testcase() {
     vis[0] = true;
     // cout << "ind" << ind << endl;
     dfs(mst, bottle_neck, vis, 0);
+
+    // cout << " bottleneck: " << endl;
+    // for (auto b : bottle_neck) {
+    //     cout << b << " ";
+    // }
 
     for (int i = 0; i < m; i++) {
         long x, y;
